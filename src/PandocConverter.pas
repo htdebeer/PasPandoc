@@ -2008,7 +2008,7 @@ implementation
     begin
         PandocProcess := CreatePandocProcess;
         PandocProcess.Execute;
-        PandocProcess.Input.Write(Pointer(StringToConvert + LineEnding)^, Length(StringToConvert) + 1);
+        PandocProcess.Input.Write(Pointer(StringToConvert)^, Length(StringToConvert));
         Result := HandlePandocProcess(PandocProcess);
     end;
 

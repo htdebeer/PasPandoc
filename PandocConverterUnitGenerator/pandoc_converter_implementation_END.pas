@@ -62,6 +62,12 @@
         end
     end;
 
+    {
+        Handle the result of running pandoc. Check both the STDOUT as well as
+        STDERR and the exit code to determine success or failure.
+
+        TODO: actual error handling
+    }
     function TPandocConverter.HandlePandocProcess(PandocProcess: TProcess): String;
     begin
         PandocProcess.CloseInput;
@@ -88,7 +94,7 @@
     begin
         PandocProcess := CreatePandocProcess;
         PandocProcess.Execute;
-        PandocProcess.Input.Write(Pointer(StringToConvert + LineEnding)^, Length(StringToConvert) + 1);
+        PandocProcess.Input.Write(Pointer(StringToConvert)^, Length(StringToConvert));
         Result := HandlePandocProcess(PandocProcess);
     end;
 
