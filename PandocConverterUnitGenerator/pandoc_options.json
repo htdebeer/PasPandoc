@@ -1,0 +1,327 @@
+{
+    "from": {
+        "type": "String",
+        "use-name": "ReadFrom"
+    },
+    "to": {
+        "type": "String",
+        "use-name": "WriteTo"
+    },
+    "output": {
+        "type": "String"
+    },
+    "data-dir": {
+        "type": "String",
+        "use-name": "DataDir"
+    },
+    "bash-completion": {
+        "type": "Boolean",
+        "use-name": "BashCompletion"
+    },
+    "verbose": {
+        "type": "Boolean"
+    },
+    "quiet": {
+        "type": "Boolean"
+    },
+    "fail-if-warnings": {
+        "type": "Boolean",
+        "use-name": "FailIfWarnings"
+    },
+    "log": {
+        "type": "String"
+    },
+    "list-input-formats": {
+        "type": "Boolean",
+        "use-name": "ListInputFormats"
+    },
+    "list-output-formats": {
+        "type": "Boolean",
+        "use-name": "ListOutputFormats"
+    },
+    "list-extensions": {
+        "type": "Boolean",
+        "use-name": "ListExtensions"
+    },
+    "list-highlight-languages": {
+        "type": "Boolean",
+        "use-name": "ListHighlightLanguages"
+    },
+    "list-highlight-styles": {
+        "type": "Boolean",
+        "use-name": "ListHighlightStyles"
+    },
+    "version": {
+        "type": "Boolean"
+    },
+    "help": {
+        "type": "Boolean"
+    },
+    "base-header-level": {
+        "type": "Integer",
+        "use-name": "BaseHeaderLevel"
+    },
+    "indented-code-classes": {
+        "type": "String",
+        "use-name": "IndentedCodeClasses"
+    },
+    "default-image-extension": {
+        "type": "String",
+        "use-name": "DefaultImageExtension"
+    },
+    "file-scope": {
+        "type": "Boolean",
+        "use-name": "FileScope"
+    },
+    "filter": {
+        "type": "String",
+        "multiple": true
+    },
+    "lua-filter": {
+        "type": "String",
+        "use-name": "LuaFilter",
+        "multiple": true
+    },
+    "metadata": {
+        "type": "String",
+        "multiple": true
+    },
+    "preserve-tabs": {
+        "type": "Boolean",
+        "use-name": "PreserveTabs"
+    },
+    "tab-stop": {
+        "type": "Integer",
+        "use-name": "TabStop"
+    },
+    "track-changes": {
+        "type": "enum",
+        "values": ["accept", "reject", "all"],
+        "use-name": "TrackChanges"
+    },
+    "extract-media": {
+        "type": "String",
+        "use-name": "ExtractMedia"
+    },
+    "abbreviations": {
+        "type": "String"
+    },
+    "standalone": {
+        "type": "Boolean"
+    },
+    "template": {
+        "type": "String"
+    },
+    "variable": {
+        "type": "String",
+        "multiple": true
+    },
+    "print-default-format": {
+        "type": "Boolean",
+        "use-name": "PrintDefaultFormat"
+    },
+    "eol": {
+        "type": "enum",
+        "values": ["crlf", "lf", "native"]
+    },
+    "dpi": {
+        "type": "Integer"
+    },
+    "wrap": {
+        "type": "enum",
+        "values": ["auto", "none", "preserve"]
+    },
+    "columns": {
+        "type": "Integer"
+    },
+    "table-of-contents": {
+        "type": "Boolean",
+        "use-name": "TableOfContents"
+    },
+    "toc-depth": {
+        "type": "Integer",
+        "use-name": "TOCDepth"
+    },
+    "strip-comments": {
+        "type": "Boolean",
+        "use-name": "StripComments"
+    },
+    "no-highlight": {
+        "type": "Boolean",
+        "use-name": "NoHighlight"
+    },
+    "highlight-style": {
+        "type": "String",
+        "use-name": "HighlightStyle"
+    },
+    "syntax-definition": {
+        "type": "String",
+        "use-name": "SyntaxDefinition"
+    },
+    "include-in-header": {
+        "type": "String",
+        "multiple": true,
+        "use-name": "IncludeInHeader"
+    },
+    "include-before-body": {
+        "type": "String",
+        "multiple": true,
+        "use-name": "IncludeBeforeBody"
+    },
+    "include-after-body": {
+        "type": "String",
+        "multiple": true,
+        "use-name": "IncludeAfterBody"
+    },
+    "resource-path": {
+        "type": "String",
+        "use-name": "ResourcePath"
+    },
+    "request-header": {
+        "type": "String",
+        "multiple": true,
+        "use-name": "RequestHeader"
+    },
+    "self-contained": {
+        "type": "Boolean",
+        "use-name": "SelfContained"
+    },
+    "html-q-tags": {
+        "type": "Boolean",
+        "use-name": "HTMLQTags"
+    },
+    "ascii": {
+        "type": "Boolean"
+    },
+    "reference-links": {
+        "type": "Boolean",
+        "use-name": "ReferenceLinks"
+    },
+    "reference-location": {
+        "type": "enum",
+        "values": ["block", "section", "document"],
+        "use-name": "ReferenceLocation"
+    },
+    "atx-headers": {
+        "type": "Boolean",
+        "use-name": "ATXHeaders"
+    },
+    "top-level-division": {
+        "type": "enum",
+        "values": ["default", "section", "chapter", "part"],
+        "use-name": "TopLevelDivision"
+    },
+    "number-sections": {
+        "type": "Boolean",
+        "use-name": "NumberSections"
+    },
+    "number-offset": {
+        "type": "String",
+        "use-name": "NumberOffset"
+    },
+    "listings": {
+        "type": "Boolean"
+    },
+    "incremental": {
+        "type": "Boolean"
+    },
+    "slide-level": {
+        "type": "Integer",
+        "use-name": "SlideLevel"
+    },
+    "section-divs": {
+        "type": "Boolean",
+        "use-name": "SectionDivs"
+    },
+    "email-obfuscation": {
+        "type": "enum",
+        "values": ["none", "javascript", "references"],
+        "use-name": "EmailObfuscation"
+    },
+    "id-prefix": {
+        "type": "String",
+        "use-name": "IdPrefix"
+    },
+    "title-prefix": {
+        "type": "String",
+        "use-name": "TitlePrefix"
+    },
+    "css": {
+        "type": "String",
+        "multiple": true
+    },
+    "reference-doc": {
+        "type": "String",
+        "use-name": "ReferenceDoc"
+    },
+    "epub-cover-image": {
+        "type": "String",
+        "use-name": "EpubCoverImage"
+    },
+    "epub-metadata": {
+        "type": "String",
+        "use-name": "EpubMetadata"
+    },
+    "epub-embed-font": {
+        "type": "String",
+        "use-name": "EpubEmbedFont"
+    },
+    "epub-chapter-level": {
+        "type": "Integer",
+        "use-name": "EpubChapterLevel"
+    },
+    "epub-subdirectory": {
+        "type": "String",
+        "use-name": "EpubSubdirectory"
+    },
+    "pdf-engine": {
+        "type": "enum",
+        "values": ["pdflatex", "lualatex", "xelatex", "wkhtmltopdf", "weasyprint", "prince", "context", "pdfroff"],
+        "use-name": "PDFEngine"
+    },
+    "pdf-engine-opt": {
+        "type": "String",
+        "multiple": true,
+        "use-name": "PDFEngineOpt"
+    },
+    "bibliography": {
+        "type": "String"
+    },
+    "csl": {
+        "type": "String"
+    },
+    "citation-abbreviations": {
+        "type": "String",
+        "use-name": "CitationAbbreviations"
+    },
+    "natbib": {
+        "type": "Boolean"
+    },
+    "biblatex": {
+        "type": "Boolean"
+    },
+    "mathjax": {
+        "type": "String"
+    },
+    "mathml": {
+        "type": "Boolean"
+    },
+    "webtex": {
+        "type": "String"
+    },
+    "katex": {
+        "type": "String"
+    },
+    "katex-stylesheet": {
+        "type": "String",
+        "use-name": "KatexStylesheet"
+    },
+    "dump-args": {
+        "type": "Boolean",
+        "use-name": "DumpArgs"
+    },
+    "ignore-args": {
+        "type": "Boolean",
+        "use-name": "IgnoreArgs"
+    }
+}
