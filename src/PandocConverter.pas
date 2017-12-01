@@ -150,6 +150,7 @@ type
         constructor Create(OptionName: String; OptionValue: TTrackChanges);
         procedure ToParameters(PandocProcess: TProcess); override;
     end;
+
     TEol = (
         eoCrlf,
         eoLf,
@@ -164,6 +165,7 @@ type
         constructor Create(OptionName: String; OptionValue: TEol);
         procedure ToParameters(PandocProcess: TProcess); override;
     end;
+
     TWrap = (
         wrAuto,
         wrNone,
@@ -178,6 +180,7 @@ type
         constructor Create(OptionName: String; OptionValue: TWrap);
         procedure ToParameters(PandocProcess: TProcess); override;
     end;
+
     TReferenceLocation = (
         reBlock,
         reSection,
@@ -192,6 +195,7 @@ type
         constructor Create(OptionName: String; OptionValue: TReferenceLocation);
         procedure ToParameters(PandocProcess: TProcess); override;
     end;
+
     TTopLevelDivision = (
         toDefault,
         toSection,
@@ -207,6 +211,7 @@ type
         constructor Create(OptionName: String; OptionValue: TTopLevelDivision);
         procedure ToParameters(PandocProcess: TProcess); override;
     end;
+
     TEmailObfuscation = (
         emNone,
         emJavascript,
@@ -221,6 +226,7 @@ type
         constructor Create(OptionName: String; OptionValue: TEmailObfuscation);
         procedure ToParameters(PandocProcess: TProcess); override;
     end;
+
     TPDFEngine = (
         pdPdflatex,
         pdLualatex,
@@ -240,6 +246,7 @@ type
         constructor Create(OptionName: String; OptionValue: TPDFEngine);
         procedure ToParameters(PandocProcess: TProcess); override;
     end;
+
 
     TPandocOption = (
         poReadFrom,
@@ -327,12 +334,14 @@ type
         poDumpArgs,
         poIgnoreArgs
     );
+
     TCommandLineOptionMap = specialize TDictionary<TPandocOption, TCommandLineOption>;
 
     TPandocConverter = class
     private
         class var FPandocPath: String;
         FOptions: TCommandLineOptionMap;
+
         function CreatePandocProcess(InputPaths: TStringList): TProcess; overload;
         function CreatePandocProcess(): TProcess; overload;
         function HandlePandocProcess(PandocProcess: TProcess): String;
@@ -1982,6 +1991,12 @@ implementation
         end
     end;
 
+    {
+        Handle the result of running pandoc. Check both the STDOUT as well as
+        STDERR and the exit code to determine success or failure.
+
+        TODO: actual error handling
+    }
     function TPandocConverter.HandlePandocProcess(PandocProcess: TProcess): String;
     begin
         PandocProcess.CloseInput;

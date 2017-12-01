@@ -509,11 +509,12 @@ begin
             Result := Result + Pandocoption.GenerateTypeDeclaration() + LineEnding;
             Result := Result + LineEnding;
             Result := Result + PandocOption.GenerateOptionTypeDeclaration() + LineEnding;
+            Result := Result + LineEnding;
         end
     end;
     Result := Result + LineEnding;
 
-    Result := Result + GeneratePandocOptionType;
+    Result := Result + GeneratePandocOptionType + LineEnding;
 
     Result := Result + 
         '    TCommandLineOptionMap = specialize TDictionary<TPandocOption, TCommandLineOption>;' + LineEnding;
@@ -524,6 +525,7 @@ begin
         '    private' + LineEnding +
         '        class var FPandocPath: String;' + LineEnding +  
         '        FOptions: TCommandLineOptionMap;' + LineEnding +
+        LineEnding +
         '        function CreatePandocProcess(InputPaths: TStringList): TProcess; overload;' + LineEnding +
         '        function CreatePandocProcess(): TProcess; overload;' + LineEnding +
         '        function HandlePandocProcess(PandocProcess: TProcess): String;' + LineEnding
