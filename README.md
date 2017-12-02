@@ -12,7 +12,7 @@ can be found in the `src` subdirectory.
 
 Convert a markdown input file to a PDF file (see `examples/HelloWorldToPDF`):
 
-```{.Pascal}
+```Pascal
 program HelloWorld;
 {$mode objfpc}{$H+}{$J-}
 {$UNITPATH ../../src}
@@ -32,7 +32,7 @@ begin
     Pandoc.NumberSections := True;
 
     { You can assign a string to a multiple command-line option multiple times. It will added to a list of values for that property. }
-    Pandoc.Metadata := 'title=PasPandic';
+    Pandoc.Metadata := 'title=PasPandoc';
     Pandoc.Metadata := 'author=Huub de Beer';
 
     { Command-line options that take a value from an enumeration as value are
