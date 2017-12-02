@@ -24,14 +24,16 @@ begin
     { Create a new Pandoc converter }
     Pandoc := TPandocConverter.Create();
     
-    { Use single command-line options by assigning a String, Boolean, or Integer value to its property. }
+    { Use single command-line options by assigning a String, Boolean, or
+      Integer value to its property. }
     Pandoc.ReadFrom := 'markdown';
     Pandoc.WriteTo := 'latex';
     Pandoc.TableOfContents := True;
     Pandoc.TocDepth := 3;
     Pandoc.NumberSections := True;
 
-    { You can assign a string to a multiple command-line option multiple times. It will added to a list of values for that property. }
+    { You can assign a string to a multiple command-line option multiple
+      times. It will added to a list of values for that property. }
     Pandoc.Metadata := 'title=PasPandoc';
     Pandoc.Metadata := 'author=Huub de Beer';
 
