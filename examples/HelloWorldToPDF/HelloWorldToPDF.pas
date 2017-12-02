@@ -1,18 +1,3 @@
-PasPandoc is a [pandoc](http://pandoc.org) wrapper written in Pascal (for
-[free pascal](https://www.freepascal.org/)).
-
-License: GPLv3
-
-Still under heavy development. At this moment it contains a program to
-generate the wrapper around pandoc. The resulting unit, `PandocConverter.pas`,
-can be found in the `src` subdirectory.
-
-
-# Example
-
-Convert a markdown input file to a PDF file (see `examples/HelloWorldToPDF`):
-
-```{.Pascal}
 program HelloWorld;
 {$mode objfpc}{$H+}{$J-}
 {$UNITPATH ../../src}
@@ -44,4 +29,3 @@ begin
     { Convert an input file. }
     Pandoc.ConvertFile('hello.md');
 end.
-```
